@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Art Prompt Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .prompt {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #555;
+        }
+        .button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">Random Art Prompt Generator</div>
+    <div class="prompt" id="prompt">Press the button to get a new art prompt!</div>
+    <button class="button" onclick="generatePrompt()">Generate</button>
+</div>
+
+<script>
+    const prompts = [
+        "Draw a surreal landscape.",
+        "Create an abstract piece using only circles.",
+        "Illustrate a scene from your favorite book.",
+        "Design a futuristic city.",
+        "Paint an animal in a human-like pose.",
+        "Sketch a dream you had recently.",
+        "Compose a piece inspired by your favorite song.",
+        "Create a self-portrait with a twist.",
+        "Illustrate an imaginary creature.",
+        "Draw a scene from a historical event.",
+        "Design a new superhero.",
+        "Create a collage using mixed media.",
+        "Sketch a scene from nature.",
+        "Illustrate a day in the life of a robot.",
+        "Paint a portrait of your favorite fictional character."
+    ];
+
+    function generatePrompt() {
+        const randomIndex = Math.floor(Math.random() * prompts.length);
+        document.getElementById('prompt').innerText = prompts[randomIndex];
+    }
+</script>
+
+</body>
+</html>
